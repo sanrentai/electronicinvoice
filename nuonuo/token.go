@@ -23,7 +23,7 @@ func GetToken(appkey, appSecret string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8")
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
